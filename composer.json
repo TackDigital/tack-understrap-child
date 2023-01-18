@@ -1,5 +1,5 @@
 {
-	"name": "understrap/understrap-child",
+	"name": "tackdigital/tack-understrap-child",
 	"description": "Basic Child Starter Theme for Understrap",
 	"type": "wordpress-theme",
 	"license": "GPL-3.0",
@@ -9,15 +9,14 @@
 		"theme",
 		"bootstrap"
 	],
-	"homepage": "https://github.com/understrap/understrap-child",
+	"homepage": "https://github.com/tackdigital/tack-understrap-child",
 	"authors": [
 		{
-			"name": "Contributors",
-			"homepage": "https://github.com/understrap/understrap-child/contributors.md"
+			"name": "Contributors"
 		}
 	],
 	"require": {
-		"php": ">=5.6"
+		"php": ">=8.0"
 	},
 	"require-dev": {
 		"php-parallel-lint/php-parallel-lint": "^1.3.2",
@@ -43,9 +42,5 @@
 		"phpstan-baseline": "@php ./vendor/phpstan/phpstan/phpstan analyse -a src/phpstan/autoload.php --generate-baseline",
 		"post-install-cmd": "@phpcs-config-set",
 		"post-update-cmd": "@phpcs-config-set"
-	},
-	"support": {
-		"issues": "https://github.com/understrap/understrap/issues",
-		"source": "https://github.com/understrap/understrap"
 	}
 }
