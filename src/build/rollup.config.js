@@ -18,7 +18,7 @@ const banner = require( './banner.js' );
 // Populate Bootstrap version specific variables.
 let bsVersion = 5;
 let bsSrcFile = 'bootstrap.js';
-let fileDest = 'child-theme';
+let fileDest = 'tack-theme';
 let globals = {
 	jquery: 'jQuery', // Ensure we use jQuery which is always available even in noConflict mode
 	'@popperjs/core': 'Popper',
