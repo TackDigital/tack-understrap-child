@@ -1,0 +1,215 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
+
+// _____________________________________________________________________________________________________________________
+// Transitions
+$transition_125ms : all 125ms ease-in-out;
+$transition_150ms : all 150ms ease-in-out;
+$transition_250ms : all 250ms ease-in-out;
+$transition_500ms : all 500ms ease-in-out;
+
+$transition-bg-150 : background-image 150ms ease;
+$transition-opacity-250 : opacity 150ms ease;
+
+// _____________________________________________________________________________________________________________________
+// Colors
+// scss-docs-start color-variables
+$white: rgb(255, 255, 255);
+$gray: rgb(226, 226, 226);
+$gray-light: rgb(192, 192, 192);
+$gray-dark: rgb(142, 142, 142);
+$black: rgb(26, 26, 26);
+$orange: rgb(240, 130, 0);
+$brown: rgb(163, 88, 39);
+$text: rgb(58, 58, 58);
+$red: rgb(229, 59, 32);
+$blue: rgb(127, 173, 223);
+$blue-dark: rgb(84, 122, 163);
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+    "white": $white,
+    "gray": $gray,
+    "gray-light": $gray-light,
+    "gray-dark": $gray-dark,
+    "black": $black,
+    "orange": $orange,
+    "brown": $brown,
+    "text": $text,
+    "red": $red,
+    "blue": $blue,
+    "blue-dark": $blue-dark
+);
+// scss-docs-end colors-map
+
+// scss-docs-start theme-color-variables
+$primary: $orange;
+$secondary: $brown;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "white": $white,
+    "gray": $gray,
+    "gray-light": $gray-light,
+    "gray-dark": $gray-dark,
+    "black": $black,
+    "orange": $orange,
+    "brown": $brown,
+    "text": $text,
+    "red": $red,
+    "blue": $blue,
+    "blue-dark": $blue-dark
+);
+// scss-docs-end theme-colors-map
+
+$font-color: $text;
+
+$overlay-color: rgba(26, 26, 26, 0.7);
+
+// _____________________________________________________________________________________________________________________
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret:                true;
+$enable-rounded:              false;
+$enable-shadows:              false;
+$enable-gradients:            false;
+$enable-transitions:          true;
+$enable-reduced-motion:       true;
+$enable-smooth-scroll:        true;
+$enable-grid-classes:         true;
+$enable-cssgrid:              false;
+$enable-button-pointers:      true;
+$enable-rfs:                  true;
+$enable-validation-icons:     true;
+$enable-negative-margins:     false;
+$enable-deprecation-messages: true;
+$enable-important-utilities:  true;
+
+
+// _____________________________________________________________________________________________________________________
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg    : $white;
+$body-color : $font-color;
+
+// _____________________________________________________________________________________________________________________
+// Links
+//
+// Style anchor elements.
+
+$link-color                      : $secondary;
+//$link-decoration               : none;
+$link-hover-color                : $secondary;
+$link-hover-decoration           : none;
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+// $emphasized-link-hover-darken-percentage   : 15%;
+
+$link-secondary-color            : $text;
+$link-secondary-decoration       : none;
+$link-secondary-hover-color      : $orange;
+$link-secondary-hover-decoration : underline;
+
+
+
+// _____________________________________________________________________________________________________________________
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$breakpoint-xs    : 0;
+$breakpoint-sm    : 576px;
+$breakpoint-md    : 768px;
+$breakpoint-lg    : 992px;
+$breakpoint-xl    : 1280px;
+
+$grid-breakpoints : (
+    xs: $breakpoint-xs,
+    sm: $breakpoint-sm,
+    md: $breakpoint-md,
+    lg: $breakpoint-lg,
+    xl: $breakpoint-xl
+);
+
+// _____________________________________________________________________________________________________________________
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths : (
+    xs: 375px,
+    sm: 546px,
+    md: 740px,
+    lg: 960px,
+    xl: 1220px
+);
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns         : 12;
+$grid-gutter-width    : 30px;
+
+// _____________________________________________________________________________________________________________________
+// Fonts
+//'Titillium Web', sans-serif;
+// Font, line-height, and color for body text, headings, and more.
+$font-path                   : "../fonts";
+
+$font-family-sans-serif      : 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$font-family-base            : $font-family-sans-serif;
+$font-weight-normal          : 400;
+$font-weight-light          : 300;
+
+
+$headings-font-family        : $font-family-sans-serif;
+$headings-font-family-base   : $headings-font-family;
+$headings-font-weight-normal : $font-weight-light;
+$headings-font-weight-bold   : $font-weight-light;
+
+$headings-color              : $text;
+
+$font-size-base              : 1rem;
+$font-size-xs-base           : 1.25rem;
+
+$h1-font-size                : $font-size-base * 2;
+$h2-font-size                : $font-size-base * 1.375;
+$h3-font-size                : $font-size-base * 1.333;
+
+$h1-xs-font-size             : $font-size-base * 1.905;
+$h2-xs-font-size             : $font-size-base * 1.905;
+//$h3-xs-font-size : $font-size-base * 2.111;
+//$h4-xs-font-size : $font-size-base * 2.111;
+//$h5-xs-font-size : $font-size-base * 2.111;
+//$h6-xs-font-size : $font-size-base * 2.111;
+
+$headings-font-weight        : $headings-font-weight-bold;
+$headings-line-height        : normal;
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: $font-family-sans-serif;
+
+// _____________________________________________________________________________________________________________________
+// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'https://cdn.example.com/assets/';
+$base-url: '/assets/';
+
+// _____________________________________________________________________________________________________________________
+// Customs
+$border-round : 5px;

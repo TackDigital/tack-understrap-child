@@ -1,0 +1,8 @@
+
+@mixin typo-h1($color:$text) {
+  font-family : $font-family-base;
+  font-size   : var(--font-size-h1);
+  font-weight : $font-weight-light;
+  line-height : var(--line-height-base);
+  color       : $color;
+}

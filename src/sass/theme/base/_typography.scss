@@ -1,0 +1,27 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+}
+
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio : 2),
+only screen and (min--moz-device-pixel-ratio : 2),
+only screen and (-o-min-device-pixel-ratio : 2/1),
+only screen and (min-device-pixel-ratio : 2),
+only screen and (min-resolution : 192dpi),
+only screen and (min-resolution : 2dppx) {
+
+  /* Retina-specific stuff here */
+
+  body {
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing  : antialiased;
+    -moz-osx-font-smoothing : grayscale;
+  }
+
+}

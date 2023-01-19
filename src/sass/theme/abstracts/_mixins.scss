@@ -1,0 +1,136 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Kitty Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+@mixin bg-image( $filepath ){
+  background-image: url( $filepath );
+  background-repeat: no-repeat;
+}
+
+@mixin oversize-gradient($gradient:inherit) {
+  position : relative;
+  z-index  : 1;
+  &:before, &:after {
+    content          : "";
+    position         : absolute;
+    top              : 0;
+    bottom           : 0;
+    width            : 9600px;
+    z-index          : -1;
+    background-image : $gradient;
+  }
+  &:before {
+    right : 100%;
+  }
+  &:after {
+    left : 100%;
+  }
+}
+
+@mixin oversize($color:inherit) {
+  position : relative;
+  z-index  : 1;
+  &:before, &:after {
+    content          : "";
+    position         : absolute;
+    top              : 0;
+    bottom           : 0;
+    width            : 9600px;
+    z-index          : -1;
+    background-color : $color;
+  }
+  &:before {
+    right : 100%;
+  }
+  &:after {
+    left : 100%;
+  }
+}
+
+@mixin oversize-left($color:inherit) {
+  position : relative;
+  z-index  : 1;
+  &:before {
+    content          : "";
+    position         : absolute;
+    top              : 0;
+    bottom           : 0;
+    right            : 100%;
+    width            : 9600px;
+    z-index          : -1;
+    background-color : $color;
+  }
+}
+
+@mixin oversize-right($color:inherit) {
+  position : relative;
+  z-index  : 1;
+  &:after {
+    content          : "";
+    position         : absolute;
+    top              : 0;
+    bottom           : 0;
+    left             : 100%;
+    width            : 9600px;
+    z-index          : -1;
+    background-color : $color;
+  }
+}
+
+@mixin image-overlay( $rgba_color: $overlay-color ) {
+  position         : absolute;
+  top              : 0;
+  right            : 0;
+  bottom           : 0;
+  left             : 0;
+  background-color : $rgba_color;
+  z-index          : 5;
+}
+
+@mixin animate-element( $property: all, $duration: 150ms) {
+  transition-property: $property;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: $duration;
+}
+
+@mixin link-secondary($color:$link-secondary-color){
+  color: $color;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: $transition_150ms;
+  &:hover{
+    color: $link-secondary-hover-color;
+    border-bottom-color: $link-secondary-hover-color;
+  }
+}
+

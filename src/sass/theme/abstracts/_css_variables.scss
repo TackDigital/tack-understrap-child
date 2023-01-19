@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide CSS variables.
+// -----------------------------------------------------------------------------
+
+// --------------------
+// FONTS
+
+:root {
+  --font-size-h1      : 1.1rem;
+
+  --line-height-h1    : 1.40em;
+
+  --letter-spacing-h1 : 0.125em;
+
+}
+
+@include media-breakpoint-up(md) {
+  :root {
+    --font-size-h1 : 1.2rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  :root {
+    --font-size-h1 : 1.3rem;
+  }
+}
+
+// --------------------
+// SPACING
+
+:root {
+  --section-mt-160 : 60px;
+}
+
+@include media-breakpoint-up(md) {
+  :root {
+    --section-mt-160 : 120px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  :root {
+    --section-mb-160 : 160px;
+  }
+}
