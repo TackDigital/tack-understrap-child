@@ -50,3 +50,11 @@ phpcs.xml
 dist/
 dist-product/
 **/img
+
+# Other Tack specific files and directories
+log/*
+log/.gitkeep
+acf-blocks/*
+!acf-blocks/.gitkeep
+assets/*
+!assets/.gitkeep
